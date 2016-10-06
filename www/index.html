@@ -8,7 +8,7 @@
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/onsenui/js/onsenui.min.js"></script>
     <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
-    
+    <script src="js/index.js"></script>
 
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
@@ -16,21 +16,27 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script>
-        ons.bootstrap()
+       /* ons.bootstrap()
           .controller('AppController', function($scope) {
+            $scope.prub = "Pepe"  ;
             $scope.load = function(page) {
-              $scope.mySplitterContent.load(page)
+              $scope.mySplitterContent.load(page);
             }
             $scope.open = function() {
               $scope.mySplitterSide.open();
-            }
-          });
+            }*/
+            
+            /*$scope.redirect = function(url){
+        $window.location.href = url;
+    }*/
+         /* });
         ons.ready(function() {
             console.log("Onsen UI is ready!");
-        });
+        });*/
     </script>
+   <!--  <script src="js/index.js"></script> -->
 </head>
-<body ng-controller="AppController as app">
+<body ng-app="MyApp" ng-controller="AppController as app">
   <ons-splitter>
     <ons-splitter-side var="mySplitterSide" side="left" width="220px" collapse swipeable>
       <ons-page>
@@ -44,7 +50,7 @@
           <ons-list-item ng-click="load('about.html')" tappable>
             About
           </ons-list-item>
-          <ons-list-item ng-click="load('views/test.html')" tappable class="list__item--tappable" modifier="chevron">
+          <ons-list-item ng-click="load('views/Admin/prub.html')" tappable>
             Test
           </ons-list-item>
           <ons-list-item ng-click="load('views/Admin/insertUser.html')" tappable>Insertar Usuario</ons-list-item>
